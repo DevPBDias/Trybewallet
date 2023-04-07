@@ -1,16 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import './TableExpenses.css';
+import '../css/TableExpenses.css';
+import editIcon from '../assets/edit.png'
+import deleteIcon from '../assets/delete.png'
+import { removeExpenses } from '../actions';
 
 class TableExpenses extends React.Component {
   state = {
     currencyBRL: 'Real',
-    removeRowTable: 'X',
   }
 
   coinFunction = (expenses) => {
-    // trasnformar o obj em array
     const coin = Object.entries(expenses.exchangeRates);
     const findingCoin = coin.find((coinInfo) => coinInfo[0] === expenses.currency);
     const returnFunc = Number(findingCoin[1].ask).toFixed(2);
@@ -34,7 +35,7 @@ class TableExpenses extends React.Component {
   }
 
   render() {
-    const { currencyBRL, removeRowTable } = this.state;
+    const { currencyBRL } = this.state;
     const { expenses } = this.props;
     return (
       <table className="tableCurrency">
@@ -48,12 +49,11 @@ class TableExpenses extends React.Component {
             <th>Câmbio utilizado</th>
             <th>Valor convertido</th>
             <th>Moeda de conversão</th>
-            <th>Editar/Excluir</th>
           </tr>
         </thead>
         {
           expenses.map((expensesInfo) => (
-            <tbody key={ expensesInfo.id }>
+            <tbody key={expensesInfo.id}>
               <tr>
                 <td>{expensesInfo.description}</td>
                 <td>{expensesInfo.tag}</td>
@@ -63,7 +63,6 @@ class TableExpenses extends React.Component {
                 <td>{this.cambioFunction(expensesInfo)}</td>
                 <td>{this.valueConvertedFunction(expensesInfo)}</td>
                 <td>{currencyBRL}</td>
-                <td>{removeRowTable}</td>
               </tr>
             </tbody>
           ))
@@ -78,6 +77,6 @@ const mapStateToProps = (state) => ({
 
 TableExpenses.propTypes = {
   expenses: PropTypes.arrayOf(PropTypes.object).isRequired,
-};
+}
 
 export default connect(mapStateToProps)(TableExpenses);

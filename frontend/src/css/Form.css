@@ -1,0 +1,38 @@
+.form-currency {
+  align-items: center;
+  background-color: rgb(4, 71, 4);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  padding: 15px;
+}
+
+input {
+  margin: 10px;
+}
+
+.input-value {
+  width: 90px;
+}
+
+select {
+  background-color: rgb(39, 37, 37);
+  border: 1px solid gold;
+  color: gold;
+  cursor: pointer;
+  margin: 10px;
+  padding: 3px;
+}
+
+.labelName {
+  color: gold;
+  font-weight: 600;
+}
+
+.formBtn {
+  background-color: rgb(39, 37, 37);
+  border: 1px solid gold;
+  color: gold;
+  cursor: pointer;
+  padding: 5px;
+}

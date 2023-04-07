@@ -8,6 +8,10 @@
   text-align: center;
 }
 
+body {
+  background-image: url(../assets/BackgroundCurrencyWorld.jpg);
+}
+
 .appName {
   color: gold;
   padding: 20px;

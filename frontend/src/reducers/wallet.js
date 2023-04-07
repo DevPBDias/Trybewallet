@@ -1,4 +1,3 @@
-// Esse reducer será responsável por tratar o todas as informações relacionadas as despesas
 import {
   ADD_EXPENSE,
   ADD_CURRENCY,
@@ -14,28 +13,28 @@ const INITIAL_USER_STATE = {
 
 const wallet = (state = INITIAL_USER_STATE, action) => {
   switch (action.type) {
-  case ADD_EXPENSE:
-    return {
-      ...state,
-      expenses: action.payload,
-    };
-  case ADD_CURRENCY:
-    return {
-      ...state,
-      currencies: action.payload,
-    };
-  case GET_API_SUCESS:
-    return {
-      ...state,
-      error: '',
-    };
-  case GET_API_FAIL:
-    return {
-      ...state,
-      error: 'Api não encontrada',
-    };
-  default:
-    return state;
+    case ADD_EXPENSE:
+      return {
+        ...state,
+        expenses: action.payload,
+      };
+    case ADD_CURRENCY:
+      return {
+        ...state,
+        currencies: action.payload,
+      };
+    case GET_API_SUCESS:
+      return {
+        ...state,
+        error: '',
+      };
+    case GET_API_FAIL:
+      return {
+        ...state,
+        error: 'Api não encontrada',
+      };
+    default:
+      return state;
   }
 };
 

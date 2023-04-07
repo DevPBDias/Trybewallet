@@ -1,5 +1,5 @@
 import React from 'react';
-import './Login.css';
+import '../css/Login.css';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
@@ -17,10 +17,9 @@ class Login extends React.Component {
 
   correctEmailAndPassword = () => {
     const { email, password } = this.state;
-    // google regex validate email
-    // https://stackoverflow.com/questions/46155/how-can-i-validate-an-email-address-in-javascript
-    const emailLogin = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const checkingEmail = emailLogin.test(email);
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const checkingEmail = emailRegex.test(email);
 
     const mininmumCaracteres = 6;
     const passwordLength = password.length >= mininmumCaracteres;
@@ -42,6 +41,7 @@ class Login extends React.Component {
     const { email } = this.state;
     const { addEmail } = this.props;
     addEmail(email);
+    localStorage.setItem('emailUser', email)
   }
 
   render() {

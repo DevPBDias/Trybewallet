@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import './Form.css';
+import '../css/Form.css';
 import { expenseAction } from '../actions';
 
 const CURRENCY_API = 'https://economia.awesomeapi.com.br/json/all';
@@ -18,7 +18,6 @@ class Form extends React.Component {
     };
   }
 
-  // como reduzir msm essas funçoes todas handle?? com target.name
   handleChange = ({ target }) => {
     this.setState({ [target.name]: target.value });
   }
@@ -27,7 +26,7 @@ class Form extends React.Component {
     event.preventDefault();
     const { expenses, dispatch } = this.props;
     const { value, description, currency, method, tag } = this.state;
-    // criar um variavel com o obj montado, prontinho para mandar para via dispatch para o reducer
+
     const response = await fetch(CURRENCY_API);
     const currencyData = await response.json();
     const goGoExpenses = {
@@ -54,7 +53,7 @@ class Form extends React.Component {
     const { value, description, currency, method, tag } = this.state;
     return (
       <form className="form-currency">
-        <label htmlFor="value-input">
+        <label className='labelName' htmlFor="value-input">
           Valor:
           <input
             value={ value }
@@ -66,7 +65,7 @@ class Form extends React.Component {
             data-testid="value-input"
           />
         </label>
-        <label htmlFor="currency-input">
+        <label className='labelName' htmlFor="currency-input">
           Moeda:
           <select
             name="currency"
@@ -75,12 +74,11 @@ class Form extends React.Component {
             onChange={ this.handleChange }
           >
             {
-            // https://www.codegrepper.com/code-examples/whatever/.map+select+option+jsx
               currencies.map((coins) => <option key={ coins }>{coins}</option>)
             }
           </select>
         </label>
-        <label htmlFor="method-input">
+        <label className='labelName' htmlFor="method-input">
           Método de pagamento:
           <select
             name="method"
@@ -94,7 +92,7 @@ class Form extends React.Component {
             <option value="Cartão de débito">Cartão de débito</option>
           </select>
         </label>
-        <label htmlFor="tag-input">
+        <label className='labelName' htmlFor="tag-input">
           Categoria:
           <select
             name="tag"
@@ -110,7 +108,7 @@ class Form extends React.Component {
             <option value="Saúde">Saúde</option>
           </select>
         </label>
-        <label htmlFor="description-input">
+        <label className='labelName' htmlFor="description-input">
           Descrição:
           <input
             name="description"
@@ -122,7 +120,12 @@ class Form extends React.Component {
             data-testid="description-input"
           />
         </label>
-        <button type="submit" onClick={ this.handleSubmit }>Adicionar despesa</button>
+        <button
+         type="submit"
+         className='formBtn'
+         onClick={ this.handleSubmit }>
+          Adicionar despesa
+        </button>
       </form>);
   }
 }

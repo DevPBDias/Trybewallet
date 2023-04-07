@@ -1,6 +1,6 @@
 .header {
   align-items: center;
-  background-color: rgb(6, 107, 6);
+  background-color: rgb(4, 71, 4);
   display: flex;
   flex-flow: nowrap;
   height: 50px;
@@ -10,18 +10,20 @@
 .email-header {
   align-items: center;
   background-color: rgb(39, 37, 37);
-  color: yellowgreen;
+  border: 1px solid gold;
+  color: gold;
   display: flex;
+  font-weight: 600;
   height: 50px;
   justify-content: center;
-  margin-left: 20px;
   width: 250px;
 }
 
 .money-header {
   align-items: center;
   background-color: rgb(39, 37, 37);
-  color: yellowgreen;
+  border: 1px solid gold;
+  color: gold;
   display: flex;
   flex-flow: nowrap;
   height: 50px;
@@ -30,9 +32,5 @@
 }
 
 .expenses-header {
-  padding: 5px;
-}
-
-.currency-header {
   padding: 5px;
 }

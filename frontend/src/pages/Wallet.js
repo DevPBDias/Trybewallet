@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import './Wallet.css';
+import '../css/Wallet.css';
 import { getCurrencyThunk } from '../actions';
 import Form from '../components/Form';
 import TableExpenses from '../components/TableExpenses';
@@ -10,16 +10,17 @@ class Wallet extends React.Component {
   componentDidMount() {
     const { getCurrencyProp } = this.props;
     getCurrencyProp();
+
   }
 
   render() {
-    const { expenses, email } = this.props;
+    const { expenses } = this.props;
     const multiplierExpensesForCurrency = expenses
       .map((value) => ((value.value) * (value.exchangeRates[value.currency].ask)));
-    // console.log(multiplierExpensesForCurrency);
     const totalSum = multiplierExpensesForCurrency
       .reduce((acumulator, current) => acumulator + current, 0);
-    // console.log(totalSum);
+    
+    const emailSaved = localStorage.getItem('emailUser')
 
     return (
       <section>
@@ -28,20 +29,14 @@ class Wallet extends React.Component {
             className="email-header"
             data-testid="email-field"
           >
-            {email}
+            {emailSaved}
           </header>
           <div className="money-header">
-            <p
-              className="currency-header"
-              data-testid="header-currency-field"
-            >
-              BRL
-            </p>
             <p
               className="expenses-header"
               data-testid="total-field"
             >
-              { totalSum.toFixed(2) }
+              { `R$ ${totalSum.toFixed(2)}` }
             </p>
           </div>
         </div>
