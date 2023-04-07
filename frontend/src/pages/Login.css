@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,800;1,600;1,800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+}
+
+.appName {
+  color: gold;
+  padding: 20px;
+  margin: 20px;
+}
+
+.form-login {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 500px;
+  justify-content: center;
+  margin: auto;
+  margin-top: 6%;
+  width: 400px;
+  color: gold;
+  background-color: rgb(4, 71, 4);
+  border-radius: 20px;
+}
+
+.nameEmail {
+  font-weight: 600;
+}
+
+.titleMsg {
+  width: 300px;
+  margin: 20px;
+}
+
+.input-email {
+  color: black;
+  width: 200px;
+  height: 22px;
+}
+
+.input-password {
+  color: black;
+  width: 200px;
+  height: 22px;
+}
+
+.button:disabled {
+  background-color: gray;
+  color: antiquewhite;
+  margin: 20px;
+  width: 120px;
+}
+
+.button {
+  background-color: gold;
+  color: rgb(4, 71, 4);
+  font-weight: 600;
+  margin: 20px;
+  width: 120px;
+}

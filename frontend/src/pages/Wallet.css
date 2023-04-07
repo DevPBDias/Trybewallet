@@ -1,0 +1,38 @@
+.header {
+  align-items: center;
+  background-color: rgb(6, 107, 6);
+  display: flex;
+  flex-flow: nowrap;
+  height: 50px;
+  justify-content: space-between;
+}
+
+.email-header {
+  align-items: center;
+  background-color: rgb(39, 37, 37);
+  color: yellowgreen;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  margin-left: 20px;
+  width: 250px;
+}
+
+.money-header {
+  align-items: center;
+  background-color: rgb(39, 37, 37);
+  color: yellowgreen;
+  display: flex;
+  flex-flow: nowrap;
+  height: 50px;
+  justify-content: center;
+  width: 150px;
+}
+
+.expenses-header {
+  padding: 5px;
+}
+
+.currency-header {
+  padding: 5px;
+}
