@@ -1,7 +1,7 @@
 ## Trybewallet
 
-- Um dos meus primeiros projetos como dev. 
-- Nessa aplicação, se faz uso de uma api de cotação de moedas extrangeiras. O usuário faz login e consegue fazer a conversão do real para moeda que desejar. Os valores calculados ficam expostos na tabela e vão sendo acumulados no header.
+- Projeto do módulo de front-end da Trybe.
+- Uma aplicação back-end que desenvolve uma API e um banco de dados para a produção de conteúdo para um blog!
 - Projeto individual do curso da Trybe.
 
 ## Tecnologias:
