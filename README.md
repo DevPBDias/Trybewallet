@@ -1,7 +1,7 @@
 ## Trybewallet
 
 - Projeto do módulo de front-end da Trybe.
-- Uma aplicação back-end que desenvolve uma API e um banco de dados para a produção de conteúdo para um blog!
+- Uma aplicação front-end que desenvolve uma tabela de conversao de moedas!
 - Projeto individual do curso da Trybe.
 
 ## Tecnologias:
