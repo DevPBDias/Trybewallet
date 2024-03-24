@@ -1,15 +1,32 @@
-## Trybewallet
+# Projeto Trybewallet
 
-- Projeto do módulo de front-end da Trybe.
-- Uma aplicação front-end que desenvolve uma tabela de conversao de moedas!
-- Projeto individual do curso da Trybe.
+**- Projeto Trybe Frot-end**
 
-## Tecnologias:
-<div>
-  <img src='https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white'/>
-  <img src='https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white'/>
-  <img src='https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E'/>
-  <img src='https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB'/>
-  <img src='https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white'/>
-  <img src='https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white'/>
-</div>
+Nessa aplicação, se faz uso de uma api de cotação de moedas extrangeiras. O usuário faz login e consegue fazer a conversão do real para moeda que desejar. Os valores calculados ficam expostos na tabela e vão sendo acumulados no header.
+
+Link para o estudo de caso do [projeto App Trailer](https://ux-portfolio-pbdias.vercel.app/project/3)
+
+<details><summary>Stack utilizada</summary>
+<ul>
+  <li>Framework: React Redux</li>
+  <li>Linguagem: Javascript</li>
+  <li>Estilização: Css3</li>
+</ul>
+</details>
+
+<details><summary>Funcionalidades</summary>
+<ul>
+   <li>Efetuar login</li>
+   <li>Converter moedas</li>
+   <li>Listar despesa em uma tabela</li>
+</ul>
+</details>
+
+<details><summary>Aprendizados</summary>
+ <ul>
+  <li>Criar tabelas</li>
+  <li>Converter valores com base em uma API</li>
+  <li>Criar linhas de tabelas com base nos filtros</li>
+  <li>Criar página de login</li>
+</ul>
+</details>
