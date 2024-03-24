@@ -4,8 +4,6 @@
 
 Nessa aplicação, se faz uso de uma api de cotação de moedas extrangeiras. O usuário faz login e consegue fazer a conversão do real para moeda que desejar. Os valores calculados ficam expostos na tabela e vão sendo acumulados no header.
 
-Link para o estudo de caso do [projeto App Trailer](https://ux-portfolio-pbdias.vercel.app/project/3)
-
 <details><summary>Stack utilizada</summary>
 <ul>
   <li>Framework: React Redux</li>
